@@ -1,5 +1,6 @@
 # README
 
+
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -42,6 +43,7 @@
 ### Association
 - belongs_to :group
 - belongs_to :user
+
 
 
 This README would normally document whatever steps are necessary to get the
