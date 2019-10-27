@@ -1,0 +1,50 @@
+.top
+  .top__message
+    グループを作成しました
+.side
+  .side-up
+    .side-up__box
+      %p.side-up__box__user
+        test-user
+      %ul.side-up__box__icon
+        %li.side-up__box__icon__group
+          =link_to "#" do
+            = fa_icon 'edit'
+        %li.side-up__box__icon__edit
+          =link_to "#" do
+            = fa_icon 'cog'
+  .side-low
+    .side-low__box
+      %p.side-low__box__group
+        test-group
+      %p.side-low__box__mesage
+        さようなら
+.main
+  .main-up
+    .main-up__box
+      %h2.main-up__box__group
+        test-group
+      %ul.main-up__box__member
+        Member:
+        %li.main-up__box__member__name
+          test-user
+    .main-up__edit
+      Edit
+  .main-middle
+    .main-middle__box
+      .main-middle__box__user
+        %p.main-middle__box__user__name
+          test-user
+        %p.main-middle__box__user__date
+          0000/0000/0000(#)
+      %p.main-middle__box__message
+        こんにちは！
+  .main-low
+    .main-low__input
+      %input.main-low__input__text{placeholder: "type a message", type: "text", name: "message[content]", id: "message_content"}
+      %label.main-low__input__image{for: "message_image"}
+        %i.fa.fa-image
+        %input.main-low__input__image__file{type: "file", name: "message[image]", id: "message_image" }     
+    %input.main-low__submit{type: "submit", name: "commit", value: "Send"}
+        
+  

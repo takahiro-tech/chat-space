@@ -1,0 +1,191 @@
+$color-white: #fff;
+$color-blue: #38aef0;
+$color-gray: #434A54;
+
+html{
+  color: #000;
+  background: $color-white;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+
+.top{
+  width: 100%;
+  background-color: $color-blue;
+  text-align: center;
+  &__message{
+    color: $color-white;
+  }
+}
+
+.side{
+  width: 300px;
+  color: $color-white;
+  float: left;
+  &-up{
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    &__box{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: bold;
+      &__user{
+        margin: 0;
+        padding: 0;
+      }
+      &__icon{
+        display: flex;
+        &__group{
+          margin-left: 0.3rem;
+          a{
+            color: $color-white;
+          }
+        }
+        &__edit{
+          margin-left: 0.3rem;
+          a{
+            color:$color-white;
+          }
+        }
+      }
+    }
+  }
+  &-low{
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 20px 20px 0;
+    overflow: scroll;
+    &__box{
+      margin-bottom: 40px;
+      font-weight: bold;
+      &__group{
+        margin-bottom: 5px;
+        font-size: 15px;
+      }
+      &__message{
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+.main{
+  width: calc(100vw - 300px);
+  float: left;
+  &-up{
+    padding: 0 40px;
+    height: 100px;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+    &__box{
+      margin-top: 35px;
+      &__group{
+        font-size: 20px;
+        color: #333333;
+        margin-bottom: 15px;
+      }
+      &__member{
+        font-size: 12px;
+        display: flex;
+        color: #999999;
+      }
+    }
+    &__edit{
+      padding: 0 20px;
+      margin-top: 28px;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid $color-blue;
+      color: $color-blue;
+    }
+  }
+  &-middle{
+    height: calc(100vh - 268px);
+    background-color: #fafafa;
+    padding: 46px 40px;
+    overflow: scroll;
+    &__box{
+      padding-bottom: 40px;
+      &__user{
+        display: flex;
+        margin-bottom: 10px;
+        &__name{
+          font-size: 16px;
+          font-weight: bold;
+          color: $color-gray;
+        }
+        &__date{
+          font-size: 12px;
+          color: #999999;
+          margin-left: 10px;
+        }
+      }
+      &__message{
+        font-size: 14px;
+        color: $color-gray;
+      }
+    }
+  }
+  &-low{
+    height: 55px;
+    padding: 20px 40px;
+    background-color: #ddd;
+    display: flex;
+    &__input{
+      position: relative;
+      width: 100%;
+      &__text{
+      height: 50px;
+      width: 100%;
+      color: $color-gray;
+      border-style: none;
+      }
+      &__image{
+        font-size: 1.3rem;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        .fa{
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+        }
+        &__file{
+          display: none;
+        }
+      }
+      ::placeholder{
+        padding-left: 10px;
+        font-size: 16px;
+        color: $color-gray;
+      }
+    }
+    &__submit{
+      width: 100px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
+      background-color: $color-blue;
+      color: $color-white;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+
+
