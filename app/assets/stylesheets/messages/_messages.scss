@@ -65,13 +65,18 @@ body{
     overflow: scroll;
     &__box{
       margin-bottom: 40px;
-      font-weight: bold;
+      font-weight: bold; 
+      a{
+        text-decoration: none;
+      }
       &__group{
         margin-bottom: 5px;
         font-size: 15px;
+        color: $color-white;
       }
       &__message{
         font-size: 11px;
+        color: $color-white;
       }
     }
   }
