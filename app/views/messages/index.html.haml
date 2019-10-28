@@ -1,24 +1,8 @@
 .top
   .top__message
     グループを作成しました
-.side
-  .side-up
-    .side-up__box
-      %p.side-up__box__user
-        test-user
-      %ul.side-up__box__icon
-        %li.side-up__box__icon__group
-          =link_to "#" do
-            = fa_icon 'edit'
-        %li.side-up__box__icon__edit
-          =link_to "#" do
-            = fa_icon 'cog'
-  .side-low
-    .side-low__box
-      %p.side-low__box__group
-        test-group
-      %p.side-low__box__mesage
-        さようなら
+= render 'shared/side_bar'
+
 .main
   .main-up
     .main-up__box

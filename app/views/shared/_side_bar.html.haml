@@ -1,0 +1,20 @@
+.side
+  .side-up
+    .side-up__box
+      %h3.side-up__box__user
+        = current_user.name
+      %ul.side-up__box__icon
+        %li.side-up__box__icon__group
+          = link_to new_group_path do
+            = fa_icon 'edit', class: 'icon'
+        %li.side-up__box__icon__edit
+          = link_to edit_user_path(current_user) do
+            = fa_icon 'cog', class: 'icon'
+  .side-low
+    - current_user.groups.each do |group|
+      .side-low__box
+        = link_to '#' do
+          .side-low__box__group
+            = group.groupname
+          .side-low__box__message
+            メッセージはまだありません。
