@@ -24,11 +24,11 @@
       %p.main-middle__box__message
         こんにちは！
   .main-low
-    .main-low__input
-      %input.main-low__input__text{placeholder: "type a message", type: "text", name: "message[content]", id: "message_content"}
-      %label.main-low__input__image{for: "message_image"}
-        %i.fa.fa-image
-        %input.main-low__input__image__file{type: "file", name: "message[image]", id: "message_image" }     
-    %input.main-low__submit{type: "submit", name: "commit", value: "Send"}
-        
-  
+    = form_for [@group, @message], :url => {:controller => :messages, :action => :create} do |f|
+      .main-low__form
+        .main-low__form__input
+          = f.text_field :body, class: 'main-low__form__input__text', placeholder: 'type a message'
+          = f.label :image, class: 'main-low__form__input__image' do
+            = fa_icon 'image', class: 'main-low__form__input__image__icon'
+            = f.file_field :image, class: 'main-low__form__input__image__file'
+        = f.submit 'Send', class: 'main-low__form__submit'
