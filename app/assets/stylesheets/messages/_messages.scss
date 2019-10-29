@@ -17,6 +17,7 @@ body{
   width: 100%;
   background-color: $color-blue;
   text-align: center;
+  display: none;
   &__message{
     color: $color-white;
   }

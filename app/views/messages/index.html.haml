@@ -7,22 +7,15 @@
   .main-up
     .main-up__box
       %h2.main-up__box__group
-        test-group
+        = current_user.name
       %ul.main-up__box__member
         Member:
         %li.main-up__box__member__name
-          test-user
+          = current_user.name
     .main-up__edit
       Edit
   .main-middle
-    .main-middle__box
-      .main-middle__box__user
-        %p.main-middle__box__user__name
-          test-user
-        %p.main-middle__box__user__date
-          0000/0000/0000(#)
-      %p.main-middle__box__message
-        こんにちは！
+    = render @messages
   .main-low
     = form_for [@group, @message], :url => {:controller => :messages, :action => :create} do |f|
       .main-low__form
