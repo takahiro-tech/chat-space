@@ -7,6 +7,7 @@ $(function(){
                     <p class = "main-middle__box__user__name">
                     ${message.user_name}
                     </p>
+                    <p class = "main-middle__box__user__date">
                     ${message.date}
                     </p>
                   </div>
