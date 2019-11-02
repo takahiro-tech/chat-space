@@ -41,8 +41,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.main-middle').append(html)
-      $('.main-low__form__input__text').val('')
-      $('.main-low__form__input__image__file').val('')
+      $('#new_message')[0].reset();
       scrollBottom()
     })
     .fail(function(){
