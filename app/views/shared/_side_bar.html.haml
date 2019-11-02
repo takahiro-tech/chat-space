@@ -13,7 +13,7 @@
   .side-low
     - current_user.groups.each do |group|
       .side-low__box
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .side-low__box__group
             = group.groupname
           .side-low__box__message

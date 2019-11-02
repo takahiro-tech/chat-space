@@ -11,13 +11,14 @@
       %ul.main-up__box__member
         Member:
         %li.main-up__box__member__name
-          = current_user.name
+          -@group.users.each do |user|
+            = user.name
     .main-up__edit
-      Edit
+      = link_to 'Edit', edit_group_path(current_user)
   .main-middle
     = render @messages
   .main-low
-    = form_for [@group, @message], :url => {:controller => :messages, :action => :create} do |f|
+    = form_for [@group, @message], url: {controller: "messages", action: "create"}, id: "new_message"  do |f|
       .main-low__form
         .main-low__form__input
           = f.text_field :body, class: 'main-low__form__input__text', placeholder: 'type a message'
