@@ -113,6 +113,10 @@ body{
       line-height: 40px;
       border: 1px solid $color-blue;
       color: $color-blue;
+      a{
+        color: $color-blue;
+        text-decoration: none;
+      }
     }
   }
   &-middle{
