@@ -13,7 +13,8 @@ $(function(){
                   <p class = "main-middle__box__message">
                     ${message.body}
                     <div class ="lower-message__image">
-                    ${image}
+                      ${image}
+                    </div>
                   </p>
                 </div>`
     return html;
