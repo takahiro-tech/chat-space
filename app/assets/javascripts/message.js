@@ -10,12 +10,14 @@ $(function(){
                     ${message.date}
                     </p>
                   </div>
-                  <p class = "main-middle__box__message">
-                    ${message.body}
+                  <div class = "main-middle__box__message">
+                    <p class = "lower-message_body">
+                      ${message.body}
+                    </p>
                     <div class ="lower-message__image">
                       ${image}
                     </div>
-                  </p>
+                  </div>
                 </div>`
     return html;
   }
